@@ -1,0 +1,13 @@
+﻿Dim code As New System.Text.StringBuilder
+Dim ote = ThisDoc.Document.Type
+Dim oteType As Type = ote.GetType()
+code.AppendLine("Function ObjectTypeEnumToString(t as ObjectTypeEnum) As String")
+code.AppendLine("   Select Case t")
+For Each value In [Enum].GetValues(oteType)
+	Dim name = [Enum].GetName(oteType, value)
+	code.AppendFormat("      Case {0}: ObjectTypeEnumToString = ""{1}"": Exit Function{2}", value, name, vbCrLf)
+Next
+code.AppendLine("   End Select")
+code.AppendLine("End Function")
+System.Windows.Forms.Clipboard.SetText(code.ToString())
+MsgBox("Code is in clipboard", Title :="ObjectTypeEnumToString")
