@@ -7,29 +7,28 @@ This VBA code may help you to find the right way, how to obtain the correct valu
 ## Setup
 
 1) Open VBA editor
-1) Copy the [code](#spy-method-code-vba) to new VBA module in application project. Or you can import the code from [m_ObjectBrowser.bas](m_ObjectBrowser.bas) file
+1) Copy the [Spy method code](#spy-method-code-vba) to new VBA module in application project. Or you can import the code from [m_ObjectBrowser.bas](m_ObjectBrowser.bas) file
 1) Generate `ObjectTypeEnumToString` (optional)
-    a) Create new document in Inventor
-    a) Navigate to iLogic editor
-    a) Create new rule
-    a) Copy [code](#-GenerateObjectTypeEnumToString.iLogicVb) to new rule from this snippet. Or download external rule here [GenerateObjectTypeEnumToString.iLogicVb](GenerateObjectTypeEnumToString.iLogicVb)
-    a) Save and Run the rule
-    a) Go to the VBA module below `Spy` method
-    a) Paste clipboard content
-    a) Close the document. You don't need them anymore.
+    1) Create new document in Inventor
+    1) Navigate to iLogic editor
+    1) Create new rule
+    1) Copy [GenerateObjectTypeEnumToString code](#generateobjecttypeenumtostringilogicvb) to new rule from this snippet. Or download external rule here [GenerateObjectTypeEnumToString.iLogicVb](GenerateObjectTypeEnumToString.iLogicVb)
+    1) Save and Run the rule
+    1) Go to the VBA module below `Spy` method
+    1) Paste clipboard content
+    1) Close the document. You don't need them anymore.
 1) Save VBA project
 1) Show the Immediate and Locals windows
 
 ![image](doc/VbaWindows.png)
-
 
 ## Usage
 
 1) Select some object(s) in Inventor
 1) Go to VBA editor
 1) Run the macro Spy(). You can use one of the following methods:
-    a) Navigate to the method in module and press `F5`
-    a) Type `Spy` to the Immediate window and press `Enter`
+    1) Navigate to the method in module and press `F5`
+    1) Type `Spy` to the Immediate window and press `Enter`
 1) Look in to the Locals window
 1) Expand appropriate node and look what is inside
 1) Repeat step 5. until you find what do you want :)
